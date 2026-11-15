@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-2.0-only
+# Copyright (C) 2026 okova
 """Сервис тревоги: ukrainealarm API -> импульсы реле Tuya. Всё в одном файле.
 
 Режимы:
@@ -17,6 +19,7 @@
     Идея и постановка задачи — okova.
     Аудит исходных скриптов, проектирование и реализация сервиса —
     Claude (ИИ-ассистент Anthropic) в совместной работе с okova.
+Лицензия: GNU General Public License v2.0 (GPL-2.0-only), см. файл LICENSE.
 Подробности — в README.md (паспорт проекта).
 """
 from __future__ import annotations
@@ -37,7 +40,7 @@ import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 log = logging.getLogger("alarm")
 

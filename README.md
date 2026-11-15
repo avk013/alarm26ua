@@ -1,6 +1,6 @@
 # alarm — сервис «воздушная тревога → реле»
 
-**Паспорт проекта** · версия **1.0.0** · 15.11.2026
+**Паспорт проекта** · версия **1.0.1** · 15.11.2026
 
 ## Авторство
 
@@ -36,6 +36,7 @@
 | `alarm.service` | Unit для systemd |
 | `install.sh` | Установка: пользователь, каталог, venv, зависимости, unit |
 | `requirements.txt` | Зависимости venv (`tinytuya`) |
+| `LICENSE` | Полный текст GNU GPL v2 |
 | `config.example.txt` | Пример конфига со всеми параметрами |
 
 Конфигов ровно два: `config.txt` и `snapshot.json`. Файл `devices.json` не используется.
@@ -189,6 +190,9 @@ sudo /opt/alarm/venv/bin/pip install -U tinytuya && sudo systemctl restart alarm
 
 ## История изменений
 
+**1.0.1** — проект лицензирован: GNU General Public License v2.0 (GPL-2.0-only), добавлен файл `LICENSE`,
+в файлы — заголовки `SPDX-License-Identifier` и копирайт.
+
 **1.0.0** — первая сводная версия. Относительно исходных `alarm.py` и `on.py`:
 
 - всё объединено в один файл, управление реле встроено (`on` / `off` / `check`),
@@ -212,4 +216,17 @@ sudo /opt/alarm/venv/bin/pip install -U tinytuya && sudo systemctl restart alarm
 
 ## Лицензия
 
-Не указана; на усмотрение автора идеи — okova.
+Copyright (C) 2026 okova.
+
+Проект распространяется на условиях **GNU General Public License версии 2.0**
+(идентификатор SPDX: `GPL-2.0-only`, то есть только версия 2, без права
+перехода на более поздние версии). Полный текст — в файле `LICENSE`.
+
+Заголовок `SPDX-License-Identifier: GPL-2.0-only` и строка копирайта стоят в
+`alarm.py`, `install.sh`, `alarm.service` и `config.example.txt`.
+
+**Сторонние компоненты.** Зависимости устанавливаются отдельно из PyPI при
+установке проекта и в состав проекта не входят: `tinytuya` (MIT), `cryptography`
+(Apache-2.0 или BSD-3-Clause), `requests` (Apache-2.0), `colorama` (BSD).
+Лицензии указаны по метаданным пакетов; при распространении проекта вместе с
+этими пакетами проверьте их условия отдельно.

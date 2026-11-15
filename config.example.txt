@@ -1,4 +1,6 @@
-# alarm v1.0.0 — идея и постановка: okova; аудит и реализация: Claude (Anthropic)
+# SPDX-License-Identifier: GPL-2.0-only
+# Copyright (C) 2026 okova
+# alarm v1.0.1 — идея и постановка: okova; аудит и реализация: Claude (Anthropic)
 # === API ===
 API_KEY=PUT_YOUR_KEY_HERE
 REGION_ID=0
